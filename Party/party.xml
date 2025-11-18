@@ -42,3 +42,8 @@ step 7 create contact mech purpose party
 <ContactMechPurposeType contactMechPurposeTypeId='BILLING_ADDRESS' description='Billing Address' ></ContactMechPurposeType>
 <ContactMechPurposeType contactMechPurposeTypeId='SHIPPING_ADDRESS' description='Shipping Address' ></ContactMechPurposeType>
 
+<PartyContactMechPurpose partyId="NB-101" contactMechId='NBC-email' contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2025-04-10 10:34:38.871"></PartyContactMechPurpose>
+<PartyContactMechPurpose partyId="NB-101" contactMechId='NBC-B_Phone' contactMechPurposeTypeId="BILLING_PHONE" fromDate="2025-04-10 10:34:38.871"></PartyContactMechPurpose>
+<PartyContactMechPurpose partyId="NB-101" contactMechId='NBC-S_Phone' contactMechPurposeTypeId="SHIPPING_PHONE" fromDate="2025-04-10 10:34:38.871"></PartyContactMechPurpose>
+<PartyContactMechPurpose partyId="NB-101" contactMechId='NBC-B_Address' contactMechPurposeTypeId="BILLING_ADDRESS" fromDate="2025-04-10 10:34:38.871"></PartyContactMechPurpose>
+<PartyContactMechPurpose partyId="NB-101" contactMechId='NBC-S_Address' contactMechPurposeTypeId="SHIPPING_ADDRESS" fromDate="2025-04-10 10:34:38.871"></PartyContactMechPurpose>
