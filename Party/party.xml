@@ -11,7 +11,7 @@ step 2 create a Person for this party created above
 <Person partyId="NB-101" firstName="Nirvan" lastName="Bobde" gender="M" ></Person>
 
 step 3 create a Party Role for this party
-<PartyRole partyId="NB-101" partyRoleTypeId="CUSTOMER" ></PartyRole>
+<PartyRole partyId="NB-101" roleTypeId="CUSTOMER" ></PartyRole>
 
 step 4 customer should have a billing/shipping phone ,billing/shipping address and primary email
 <ContactMech contactMechId='NBC-email' contactMechTypeId='EMAIL_ADDRESS' infoString='nirvan.bobde@example.com' ></ContactMech>

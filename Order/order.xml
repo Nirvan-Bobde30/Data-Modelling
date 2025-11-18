@@ -1,0 +1,86 @@
+<!-- _______________ ORDER_HEADER _______________ -->
+
+<OrderHeader 
+  orderId="NB_1"
+  orderTypeId="SALES_ORDER"
+  statusId="ORDER_CREATED"
+  createdBy="nirvan.test"
+  orderDate="2025-11-18 00:00:00.0"
+  entryDate="2025-11-18 00:00:00.0"
+/>
+
+<!-- _______________ ORDER_STATUS _______________ -->
+
+<OrderStatus
+  orderStatusId="NB_1_Created"
+  orderId="NB_1"
+  statusId="ORDER_CREATED"
+  statusUserLogin="nirvan.test"
+/>
+
+<!-- _______________ ORDER_ITEM _______________ -->
+
+<OrderItem
+  orderId="NB_1"
+  orderItemSeqId="1"
+  productId="FALCON_RED"
+  statusId="ITEM_CREATED"
+  quantity="23"
+/>
+
+<OrderItem
+  orderId="NB_1"
+  orderItemSeqId="2"
+  productId="FALCON_BLUE"
+  statusId="ITEM_CREATED"
+  quantity="2"
+/>
+
+<!-- _______________ ORDER_CONTACT_MECH _______________ -->
+
+<OrderContactMech
+  orderId="NB_1"
+  contactMechId='NBC-B_Address'
+  contactMechPurposeTypeId="BILLING_ADDRESS"
+/>
+
+<OrderContactMech
+  orderId="NB_1"
+  contactMechId='NBC-S_Address'
+  contactMechPurposeTypeId="SHIPPING_ADDRESS"
+/>
+
+<OrderContactMech
+  orderId="NB_1"
+  contactMechId='NBC-email'
+  contactMechPurposeTypeId="PRIMARY_EMAIL"
+/>
+
+<OrderContactMech
+  orderId="NB_1"
+  contactMechId='NBC-B_Phone'
+  contactMechPurposeTypeId="BILLING_PHONE"
+/>
+
+<OrderContactMech
+  orderId="NB_1"
+  contactMechId='NBC-S_Phone'
+  contactMechPurposeTypeId="SHIPPING_PHONE"
+/>
+
+<!-- _______________ ORDER_ROLE _______________ -->
+
+<OrderRole
+  orderId="NB_1"
+  roleTypeId="SHIP_TO_CUSTOMER"
+  partyId="NB-101"
+  fromDate="2025-03-18 05:15:43.177"
+/>
+<OrderRole
+  orderId="NB_1"
+  roleTypeId="BILL_TO_CUSTOMER"
+  partyId="NB-101"
+  fromDate="2025-06-18 00:00:00.0"
+/>
+
+
