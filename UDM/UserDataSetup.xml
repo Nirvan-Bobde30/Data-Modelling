@@ -1,0 +1,15 @@
+<entity-engine-xml>
+
+  <UserLogin userLoginId="nirvan.bobde" currentPassword="test@123" enabled="Y" partyId="NB-101" />
+  <SecurityGroup groupId="NB_group1" description="this is practice security group1" />
+  <SecurityGroup groupId="NB_group2" description="this is practice security group2" />
+  <SecurityPermission permissionId="NB_Customer" description="this is sample permission" />
+  <SecurityGroupPermission groupId="NB_group1" permissionId="ACCOUNTING_ADMIN" />
+  <SecurityGroupPermission groupId="NB_group2" permissionId="ACCOUNTING_DELETE" />
+  <SecurityGroupPermission groupId="NB_group1" permissionId="NB_Customer" />
+  <SecurityGroupPermission groupId="NB_group2" permissionId="ACCOUNTING_CREATE" />
+  <UserLoginSecurityGroup userLoginId="nirvan.bobde" groupId="NB_group1" fromDate="2025-04-10 10:34:38.871" />
+  <UserLoginSecurityGroup userLoginId="nirvan.bobde" groupId="NB_group2" fromDate="2025-04-10 10:34:38.871" />
+  <UserLoginSecurityGroup userLoginId="nirvan.bobde" groupId="NB_group3" fromDate="2025-04-10 10:34:38.871" />
+
+</entity-engine-xml>

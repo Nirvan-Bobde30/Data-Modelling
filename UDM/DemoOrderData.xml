@@ -1,0 +1,103 @@
+<entity-engine-xml>
+
+<!-- _______________  ORDER CREATED STATE  _______________ -->
+
+<!-- //ORDER HEADER -->
+<OrderHeader  orderId="NB1" orderTypeId="SALES_ORDER" statusId="ORDER_CREATED" createdBy="nirvan.bobde" orderDate="2025-11-15 00:00:00.0" entryDate="2025-11-15 00:00:00.0" />
+
+<!-- //ORDER STATUS  -->
+<OrderStatus orderStatusId="NB1_CREATED" orderId="NB1" statusId="ORDER_CREATED" statusUserLogin="nirvan.bobde" />
+
+<!-- //ORDER SHIPMENT GROUP -->
+<OrderItemShipGroup orderId="NB1" shipGroupSeqId="1" shipmentMethodTypeId="2_DAYS" carrierPartyId="FEDEX"/>
+
+<!-- //ORDER ITEM AND ORDER ITEM STATUS -->
+<OrderItem orderId="NB1" orderItemSeqId="1" shipGroupSeqId="1" productId="NB_PRODUCT_VARIANT" statusId="ITEM_CREATED" quantity="1" facilityID="_NA_"/>
+<OrderStatus orderStatusId="NB1_CREATED" orderId="NB1" orderItemSeqId="1" statusId="ITEM_CREATED" facilityID="_NA_" />
+
+<!--//ASSIGN CONTACT MECH FOR ADDRESSES AND OTHER DETAILS-->
+<OrderContactMech orderId="NB1" contactMechId="NBC_B_Address" contactMechPurposeTypeId="BILLING_ADDRESS"/>
+<OrderContactMech orderId="NB1" contactMechId="NBC_S_Address" contactMechPurposeTypeId="SHIPPING_ADDRESS"/>
+<OrderContactMech orderId="NB1" contactMechId="NBC_B_Phone" contactMechPurposeTypeId="BILLING_PHONE"/>
+<OrderContactMech orderId="NB1" contactMechId="NBC_S_Phone" contactMechPurposeTypeId="SHIPPING_PHONE"/>
+<OrderContactMech orderId="NB1" contactMechId="NBC_EMAIL" contactMechPurposeTypeId="PRIMARY_EMAIL" />
+
+<!-- //ASSIGN ROLE TO PARTY -->
+<OrderRole orderId="NB1" roleTypeId="SHIP_TO_CUSTOMER" partyId="NB_101" fromDate="2025-03-18 05:15:43.177" />
+<OrderRole orderId="NB1" roleTypeId="BILL_TO_CUSTOMER" partyId="NB_101" fromDate="2025-03-18 05:15:43.177" />
+
+<!-- //ORDER PAYMENT PREFERENCE -->
+<OrderPaymentPreference orderPaymentPreferenceId="OPP1" orderId="NB1" paymentMethodTypeId="EXT_SHOP_PAYPAL" statusId="PAYMENT_AUTHORIZED" />
+
+<!-- _______________  ORDER APPROVED STATE  _______________ -->
+
+<!-- //ORDER HEADER -->
+<OrderHeader  orderId="NB1" orderTypeId="SALES_ORDER" statusId="ORDER_APPROVED" createdBy="nirvan.bobde" orderDate="2025-11-15 00:00:00.0" entryDate="2025-11-15 00:00:00.0" />
+
+<!-- //ORDER STATUS  -->
+<OrderStatus orderStatusId="NB1_APPROVED" orderId="NB1" statusId="ORDER_APPROVED" statusUserLogin="nirvan.bobde" />
+
+<!-- //ORDER SHIPMENT GROUP -->
+<OrderItemShipGroup orderId="NB1" shipGroupSeqId="1" shipmentMethodTypeId="2_DAYS" carrierPartyId="FEDEX" facilityId="NB_WAREHOUSE"/>
+
+<!-- //ORDER ITEM AND ORDER ITEM STATUS -->
+<OrderItem orderId="NB1" orderItemSeqId="1" shipGroupSeqId="1" productId="NB_PRODUCT_VARIANT" statusId="ITEM_APPROVED" quantity="1" facilityID="_NA_"/>
+<OrderStatus orderStatusId="NB1_APPROVED" orderId="NB1" orderItemSeqId="1" statusId="ITEM_APPROVED" facilityID="_NA_" />
+
+<!-- //INVENTORY DETAILS LOGS  -->
+<InventoryItemDetail availableToPromiseDiff="-1.000000" effectiveDate="2025-11-17 08:15:39.613" inventoryItemDetailSeqId="NB_I_DETAIL" inventoryItemId="NB_I" lastAvailableToPromise="100.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-18 08:15:39.516" orderId="NB1" orderItemSeqId="1" quantityOnHandDiff="0.000000" shipGroupSeqId="1" />
+
+<InventoryItem accountingQuantityTotal="100.000000" availableToPromiseTotal="99.000000" datetimeReceived="2025-01-11 09:36:42.0" facilityId="NB_WAREHOUSE" inventoryItemId="NB_I" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="A-01-01" ownerPartyId="COMPANY" productId="NB_PRODUCT_VARIANT" quantityOnHandTotal="100.000000" unitCost="300.000000"/>
+<!-- //inventory reserved for the item -->
+<OrderItemShipGrpInvRes inventoryItemId="NB_1" orderId="NB1" orderItemSeqId="1" quantity="1.000000" reserveOrderEnumId="INVRO_FIFO_REC" reservedDatetime="2024-07-31 11:00:16.698" shipGroupSeqId="1"/> 
+
+<ProductFacility computedLastInventoryCount="99.000000" facilityId="NB_WAREHOUSE" inventoryItemId="NB_I" minimumStock="10" allowBrokering="N" lastInventoryCount="100.000000" productId="NB_PRODUCT_VARIANT"/>
+
+<!-- _______________  ORDER IN-PROGRESS STATE  _______________ -->
+
+<Shipment createdByUserLogin="nirvan.test" destinationContactMechId="NBC_S_Address" estimatedShipCost="0.00" originContactMechId="32432" originFacilityId="NB_WAREHOUSE" partyIdFrom="COMPANY" partyIdTo="NB_101" primaryOrderId="NB1" primaryShipGroupSeqId="1" shipmentId="NB_SHIPMENT1" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_INPUT"/>
+
+<OrderShipment orderId="NB1" orderItemSeqId="1" quantity="1.000000" shipGroupSeqId="1" shipmentId="NB_SHIPMENT1" shipmentItemSeqId="1"/>
+
+<Shipment createdByUserLogin="nirvan.test" destinationContactMechId="NBC_S_Address" estimatedShipCost="0.00" originContactMechId="32432" originFacilityId="NB_WAREHOUSE" partyIdFrom="COMPANY" partyIdTo="NB_101" primaryOrderId="NB1" primaryShipGroupSeqId="1" shipmentId="NB_SHIPMENT1" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_APPROVED"/>
+
+<ShipmentItem productId="NB_PRODUCT_VARIANT" quantity="1.000000" shipmentId="NB_SHIPMENT1" shipmentItemSeqId="1"/>
+
+<ShipmentRouteSegment billingWeight="0.661400" billingWeightUomId="WT_lb" carrierPartyId="TEST" carrierServiceStatusId="SHRSCS_NOT_STARTED" destContactMechId="NBC_S_Address" originContactMechId="32432" originFacilityId="NB_WAREHOUSE" shipmentId="NB_SHIPMENT1" shipmentMethodTypeId="SAME_DAY_BLINKIT" shipmentRouteSegmentId="01"/>
+
+<Picklist facilityId="NB_WAREHOUSE" picklistDate="2025-11-19 01:12:53.508" picklistId="NB7777" shipmentMethodTypeId="SAME_DAY_BLINKIT" statusId="PICKLIST_INPUT"/>
+<Picklist facilityId="NB_WAREHOUSE" picklistDate="2025-11-19 01:12:53.508" picklistId="NB7777" shipmentMethodTypeId="SAME_DAY_BLINKIT" statusId="PICKLIST_ASSIGNED"/>
+<Picklist facilityId="NB_WAREHOUSE" picklistDate="2025-11-19 01:12:53.508" picklistId="NB7777" shipmentMethodTypeId="SAME_DAY_BLINKIT" statusId="PICKLIST_PRINTED"/>
+<Picklist facilityId="NB_WAREHOUSE" picklistDate="2025-11-19 01:12:53.508" picklistId="NB7777" shipmentMethodTypeId="SAME_DAY_BLINKIT" statusId="PICKLIST_PICKED"/>
+
+<PicklistBin binLocationNumber="1" picklistBinId="F14274" picklistId="NB7777" primaryOrderId="NB1" primaryShipGroupSeqId="1"/>
+
+<PicklistItem inventoryItemId="NB_I" itemStatusId="PICKITEM_PENDING" orderId="NB1" orderItemSeqId="1" picked="1.000000" picklistBinId="F14274" quantity="1.000000" shipGroupSeqId="1"/>
+
+<PicklistItem inventoryItemId="NB_I" itemStatusId="PICKITEM_COMPLETED" orderId="NB1" orderItemSeqId="1" picked="1.000000" picklistBinId="F14274" quantity="1.000000" shipGroupSeqId="1"/>
+
+<!-- _______________  ORDER COMPLETED STATE  _______________ -->
+
+<Shipment createdByUserLogin="nirvan.test" destinationContactMechId="NBC_S_Address" estimatedShipCost="0.00" originContactMechId="32432" originFacilityId="NB_WAREHOUSE" partyIdFrom="COMPANY" partyIdTo="NB_101" primaryOrderId="NB1" primaryShipGroupSeqId="1" shipmentId="NB_SHIPMENT1" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_PACKED"/>
+
+<Shipment createdByUserLogin="nirvan.test" destinationContactMechId="NBC_S_Address" estimatedShipCost="0.00" originContactMechId="32432" originFacilityId="NB_WAREHOUSE" partyIdFrom="COMPANY" partyIdTo="NB_101" primaryOrderId="NB1" primaryShipGroupSeqId="1" shipmentId="NB_SHIPMENT1" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_SHIPPED"/>
+
+<ShipmentRouteSegment billingWeight="0.661400" billingWeightUomId="WT_lb" carrierPartyId="TEST" carrierServiceStatusId="SHRSCS_ACCEPTED" destContactMechId="NBC_S_Address" isTrackingRequired="Y" originContactMechId="32432" originFacilityId="NB_WAREHOUSE" referenceNumber="123" shipmentId="NB_SHIPMENT1" shipmentMethodTypeId="SAME_DAY_BLINKIT" shipmentRouteSegmentId="01" trackingIdNumber="123"/>
+
+<ItemIssuance inventoryItemId="NB_I" issuedDateTime="2025-11-21 01:59:58.248" itemIssuanceId="FM111068" orderId="NB1" orderItemSeqId="1" quantity="1.000000" shipGroupSeqId="1" shipmentId="NB_SHIPMENT1" shipmentItemSeqId="1"/>
+
+<InventoryItemDetail availableToPromiseDiff="0.000000" effectiveDate="2025-11-17 08:15:39.613" inventoryItemDetailSeqId="NB_I_DETAIL" inventoryItemId="NB_I" itemIssuanceId="FM111068" lastAvailableToPromise="99.000000" quantityOnHandDiff="-1.000000" lastQuantityOnHand="100.000000" lastUpdatedStamp="2025-11-18 08:15:39.516" orderId="NB1" orderItemSeqId="1" shipmentId="NB_SHIPMENT1" shipGroupSeqId="1" />
+
+<InventoryItem accountingQuantityTotal="99.000000" availableToPromiseTotal="99.000000" datetimeReceived="2025-01-01 09:36:42.0" facilityId="NB_WAREHOUSE" inventoryItemId="NB_I" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="A-01-01" ownerPartyId="COMPANY" productId="NB_PRODUCT_VARIANT" quantityOnHandTotal="99.000000" unitCost="300.000000"/>
+
+<ProductFacility computedLastInventoryCount="99.000000" facilityId="NB_WAREHOUSE" inventoryItemId="FA1NB_I01" minimumStock="10" allowBrokering="N" lastInventoryCount="99.000000" productId="NB_PRODUCT_VARIANT"/>
+
+<OrderItem orderId="NB1" orderItemSeqId="1" shipGroupSeqId="1" productId="NB_PRODUCT_VARIANT" statusId="ITEM_COMPLETED" quantity="1" />
+<OrderStatus orderStatusId="UDM002APP11" orderId="NB1" orderItemSeqId="1" statusId="ITEM_COMPLETED"/>
+
+<OrderStatus orderStatusId="NB1_APPROVED" orderId="NB1" statusId="ORDER_COMPLETED" statusUserLogin="nirvan.bobde" />
+
+<OrderHeader  orderId="NB1" orderTypeId="SALES_ORDER" statusId="ORDER_COMPLETED" createdBy="nirvan.bobde" orderDate="2025-11-15 00:00:00.0" entryDate="2025-11-15 00:00:00.0" />
+
+
+</entity-engine-xml>

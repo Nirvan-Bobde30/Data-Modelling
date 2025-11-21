@@ -1,0 +1,52 @@
+<!-- Question 1 : Make an Customer With the Following Details
+It should have a billing/shipping phone
+It should have a Billing/ shipping address
+It should have Primary Email -->
+
+<entity-engine-xml>
+
+Step 1 create a party(customer)
+<Party partyId="NB_101" partyTypeId='PERSON' statusId='PARTY_ENABLED' description='Customer with certain details' createdDate="7/26/2025 10:34:38.871" />
+
+step 2 create a Person for this party created above 
+<Person partyId="NB_101" firstName="Nirvan" lastName="Bobde" gender="M" />
+
+step 3 create a Party Role for this party
+<PartyRole partyId="NB_101" roleTypeId="CUSTOMER" ></PartyRole>
+
+step 4 customer should have a billing/shipping phone ,billing/shipping address and primary email
+<ContactMech contactMechId='NBC_EMAIL' contactMechTypeId='EMAIL_ADDRESS' infoString='nirvan.bobde@example.com' />
+<ContactMech contactMechId='NBC_B_Phone' contactMechTypeId='TELECOM_NUMBER' />
+<ContactMech contactMechId='NBC_S_Phone' contactMechTypeId='TELECOM_NUMBER' />
+<ContactMech contactMechId='NBC_B_Address' contactMechTypeId='POSTAL_ADDRESS' />
+<ContactMech contactMechId='NBC_S_Address' contactMechTypeId='POSTAL_ADDRESS' />
+
+Step 5.1 add billing and shipping phone to telecomNumber entity 
+<TelecomNumber contactMechId='NBC_B_Phone' countryCode="+91" contactNumber='883374499' />
+<TelecomNumber contactMechId='NBC_S_Phone' countryCode="+91" contactNumber='228899339' />
+
+Step 5.2 add billing and shipping address to PostalAddress entity 
+<PostalAddress contactMechId='NBC_B_Address' countryGeoId='India' stateProvinceGeoId='M.P' city='Indore' houseNumber='13/b' address1='vaishali nagar,annapurna road ' postalCode='452001' />
+<PostalAddress contactMechId='NBC_S_Address' countryGeoId='India' stateProvinceGeoId='M.H' city='Pune' houseNumber='24/a' address1='pune camp area,near mg road ' postalCode='48931' />
+
+step 6 Relate the party with its contact
+<PartyContactMech partyId='NB_101' contactMechId='NBC_EMAIL' fromDate="2025-04-10 10:34:38.871" />
+<PartyContactMech partyId='NB_101' contactMechId='NBC_B_Phone' fromDate="2025-04-10 10:34:38.871" />
+<PartyContactMech partyId='NB_101' contactMechId='NBC_S_Phone' fromDate="2025-04-10 10:34:38.871" />
+<PartyContactMech partyId='NB_101' contactMechId='NBC_B_Address' fromDate="2025-04-10 10:34:38.871" />
+<PartyContactMech partyId='NB_101' contactMechId='NBC_S_Address' fromDate="2025-04-10 10:34:38.871" />
+
+step 7 create contact mech purpose party
+<ContactMechPurposeType contactMechPurposeTypeId='PRIMARY_EMAIL' description='Primary Email' />
+<ContactMechPurposeType contactMechPurposeTypeId='BILLING_PHONE' description='Billing Phone' />
+<ContactMechPurposeType contactMechPurposeTypeId='SHIPPING_PHONE' description='Shipping Phone' />
+<ContactMechPurposeType contactMechPurposeTypeId='BILLING_ADDRESS' description='Billing Address' />
+<ContactMechPurposeType contactMechPurposeTypeId='SHIPPING_ADDRESS' description='Shipping Address' />
+
+<PartyContactMechPurpose partyId="NB_101" contactMechId='NBC_EMAIL' contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2025-04-10 10:34:38.871" />
+<PartyContactMechPurpose partyId="NB_101" contactMechId='NBC_B_Phone' contactMechPurposeTypeId="BILLING_PHONE" fromDate="2025-04-10 10:34:38.871" />
+<PartyContactMechPurpose partyId="NB_101" contactMechId='NBC_S_Phone' contactMechPurposeTypeId="SHIPPING_PHONE" fromDate="2025-04-10 10:34:38.871" />
+<PartyContactMechPurpose partyId="NB_101" contactMechId='NBC_B_Address' contactMechPurposeTypeId="BILLING_ADDRESS" fromDate="2025-04-10 10:34:38.871" />
+<PartyContactMechPurpose partyId="NB_101" contactMechId='NBC_S_Address' contactMechPurposeTypeId="SHIPPING_ADDRESS" fromDate="2025-04-10 10:34:38.871" />
+
+</entity-engine-xml>

@@ -1,0 +1,20 @@
+<entity-engine-xml>
+
+<!-- _______________ FACILITY  _______________ -->
+  <Facility facilityId="NB_WAREHOUSE" facilityTypeId="WAREHOUSE" facilityName="NB Warehouse" ownerPartyId="COMPANY"/>
+
+  <FacilityLocation facilityId="NB_WAREHOUSE" locationSeqId="A-01-01" areaId="A" aisleId="01" sectionId="upperRow" levelId="" locationTypeEnumId="FLT_PICKLOC" positionId="01"/>
+
+
+<!-- _______________ FACILITY GROUP (Assign facility to a group)  _______________ -->
+  <FacilityGroupMember facilityGroupId="NB_GROUP" facilityId="NB_WAREHOUSE" fromDate="2025-04-12 05:56:50.924"/>
+
+  <!-- _______________ Add Product to the facility  _______________ -->
+  <ProductFacilityLocation facilityId="NB_WAREHOUSE" locationSeqId="A-01-01" productId="NB_PRODUCT_VARIANT"/>
+
+
+  <!-- _______________  Product facility  _______________ -->
+
+  <ProductFacility computedLastInventoryCount="100.000000" facilityId="NB_WAREHOUSE" inventoryItemId="NB_I" minimumStock="10" allowBrokering="N" lastInventoryCount="100.000000" productId="NB_PRODUCT_VARIANT"/>
+  
+</entity-engine-xml>

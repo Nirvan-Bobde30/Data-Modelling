@@ -1,1 +1,2 @@
 # Data-Modelling
+# CustomerDataSetup.xml, UserDataSetup.xml (create a application user + security group + permission etc), CatalogDataSetup.xml (product store + product catalog + product category and rollup), ProductDataSetup.xml (virtual, variant products and features, kit product) + FacilityDataSetup.xml + Inventory.xml + DemoOrderData.xml (it included order + picklist+ shipment, inventory change data for Order Created  -> Order Approved -> Print Picklist -> pack -> ship)#

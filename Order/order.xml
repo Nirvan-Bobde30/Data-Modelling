@@ -1,3 +1,4 @@
+<!-- _______________ ORDER_CREATED_FLOW _______________ -->
 <!-- _______________ ORDER_HEADER _______________ -->
 
 <OrderHeader 
@@ -34,6 +35,19 @@
   productId="FALCON_BLUE"
   statusId="ITEM_CREATED"
   quantity="2"
+/>
+//order item status
+<OrderStatus
+  orderStatusId="NB_1_Created"
+  orderId="NB_1"
+  orderItemSeqId="1"
+  statusId="ITEM_CREATED"
+/>
+<OrderStatus
+  orderStatusId="NB_1_Created"
+  orderId="NB_1"
+  orderItemSeqId="2"
+  statusId="ITEM_CREATED"
 />
 
 <!-- _______________ ORDER_CONTACT_MECH _______________ -->
@@ -83,4 +97,21 @@
   fromDate="2025-06-18 00:00:00.0"
 />
 
+<OrderItemShipGroup
+    orderId="NB_1"
+    shipGroupSeqId="1"
+    shipmentMethodTypeId="STANDARD"
+    carrierPartyId="TEST"
+/>
+
+<!-- _______________ ORDER_APPROVED_FLOW _______________ -->
+//StatusId changes from created to approved 
+<OrderHeader 
+  orderId="NB_1"
+  orderTypeId="SALES_ORDER"
+  statusId="ORDER_APPROVED"
+  createdBy="nirvan.test"
+  orderDate="2025-11-18 00:00:00.0"
+  entryDate="2025-11-18 00:00:00.0"
+/>
 

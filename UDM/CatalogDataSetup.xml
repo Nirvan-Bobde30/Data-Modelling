@@ -1,0 +1,28 @@
+<entity-engine-xml>
+
+<!-- _______________ PRODUCT STORES _______________ -->
+<ProductStore productStoreId="STORE1" storeName="Demo Store" companyName="Demo Company" payToPartyId="COMPANY"/>
+<ProductStore productStoreId="STORE"  storeName="Primary Store" companyName="Main Company" payToPartyId="COMPANY"/>
+
+<!-- _______________ PROD CATALOG _______________ -->
+<ProdCatalog prodCatalogId="HOTWAX_N" catalogName="HOTWAX DUMMY CATALOG"/>
+
+<!-- _______________ PRODUCT STORE CATALOG _______________ -->
+<ProductStoreCatalog productStoreId="STORE1" prodCatalogId="HOTWAX_N" fromDate="2025-11-18 00:00:00.0" />
+<ProductStoreCatalog productStoreId="STORE"  prodCatalogId="HOTWAX_N" fromDate="2025-11-18 00:00:00.0" />
+
+<!-- _______________ PRODUCT CATEGORY _______________ -->
+<ProductCategory productCategoryId="UDM_CAT1" productCategoryTypeId="CATALOG_CATEGORY" categoryName="UDM CAT 1" description="UDM assignment category"/>
+
+<!-- _______________ PROD CATALOG CATEGORY (link HOTWAX_N -> UDM_CAT1) _______________ -->
+<ProdCatalogCategory prodCatalogId="HOTWAX_N" productCategoryId="UDM_CAT1" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" sequenceNum="1"/>
+
+<!-- subcategory under UDM_CAT1 -->
+<ProductCategory productCategoryId="UDM_SUB_CAT1" categoryName="UDM SUB CAT 1" productCategoryTypeId="CATALOG_CATEGORY"/>
+
+<!-- Add Subcategory to Root Category -->
+<ProductCategoryRollup parentProductCategoryId="HOTWAX_N" productCategoryId="UDM_SUB_CAT1"/>
+
+
+
+</entity-engine-xml>

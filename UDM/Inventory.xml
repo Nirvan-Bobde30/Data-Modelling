@@ -1,0 +1,8 @@
+<entity-engine-xml>
+
+ <!-- _______________ Create Inventory Item  _______________ -->
+  <InventoryItem accountingQuantityTotal="100.000000" availableToPromiseTotal="100.000000" datetimeReceived="2025-01-11 09:36:42.0" facilityId="NB_WAREHOUSE" inventoryItemId="NB_I" inventoryItemTypeId="NON_SERIAL_INV_ITEM" locationSeqId="A-01-01" ownerPartyId="COMPANY" productId="NB_PRODUCT_VARIANT" quantityOnHandTotal="100.000000" unitCost="300.000000"/>
+
+  //INVENTORY ITEM DETAILS
+  
+</entity-engine-xml>

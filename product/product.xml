@@ -21,15 +21,16 @@
 <!-- Add Subcategory to Root Category -->
 <ProductCategoryRollup parentProductCategoryId="CATROOT" productCategoryId="CAT_SUB_1"/>
 
-
 <!-- _______________ PRODUCTS _______________ -->
 
 <!-- 1) VIRTUAL PRODUCT (P300) -->
+
 <Product
     productId="P300"
     internalName="Demo Virtual Product"
     productTypeId="FINISHED_GOOD"
     isVirtual="Y"
+    isVariant="N"
     virtualVariantMethodEnum="VV_VARIANTTREE"
     createdByUserLogin="system"
 />
